@@ -1,0 +1,18 @@
+<!-- form.component.html -->
+
+<form (ngSubmit)="onSubmit()"  [formGroup]="userForm">
+
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+  
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+    <div>
+        <label>Imagen:</label>
+        <input type="file" (change)="onFileChanged($event)" #fileInput>
+      </div>
+    <button>Enviar</button>
+
+  </form>
+
+  <button (click)="pulsar()">Enviar</button>
